@@ -1,0 +1,13 @@
+body .firstPage {
+  background: url("../img/landingpage.png") no-repeat fixed center;
+  width: 100vw;
+  height: 100vh;
+  padding: 200px 30px 50px 80px;
+  font-family: 'Exo', sans-serif;
+  font-size: 40px;
+  text-align: center; }
+  body .firstPage .btn {
+    height: 50px;
+    width: 150px;
+    background-color: #ff6d6d;
+    color: white; }

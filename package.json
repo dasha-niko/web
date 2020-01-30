@@ -1,0 +1,27 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasha-niko/web.git"
+  },
+  "author": "Dariya Nikolayuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dasha-niko/web/issues"
+  },
+  "homepage": "https://github.com/dasha-niko/web#readme",
+  "devDependencies": {
+    "browser": "^0.2.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "sync": "^0.2.5"
+  },
+  "dependencies": {},
+  "description": ""
+}
