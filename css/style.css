@@ -101,6 +101,9 @@ body .thirdPage {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center; }
+  body .thirdPage .firstRow {
+    display: flex;
+    flex-direction: row; }
   body .thirdPage .penHolder {
     width: 50%;
     height: auto; }
@@ -118,6 +121,10 @@ body .thirdPage {
     color: #282828;
     font-family: "Exo";
     font-weight: 500; }
+
+body .fourthPage .row4 {
+  display: flex;
+  flex-direction: row; }
 
 body .fourthPage .newDesign2 {
   font-size: 16px;
@@ -154,8 +161,8 @@ body .fourthPage .grayPara3 {
 
 body .fourthPage .new-design2 {
   padding-top: 90px;
-  padding-right: 150px;
-  padding-left: 150px;
+  padding-right: 60px;
+  padding-left: 60px;
   padding-bottom: 90px;
   z-index: 10;
   background-color: white;
@@ -163,3 +170,7 @@ body .fourthPage .new-design2 {
   @media (min-width: 600px) {
     body .fourthPage .new-design2 {
       margin: 0 40% 0 0; } }
+
+body .fifthPage {
+  background: url("../img/back5.png") no-repeat fixed center;
+  background-size: cover; }

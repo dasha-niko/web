@@ -127,7 +127,10 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-
+ .firstRow{
+   display: flex;
+   flex-direction: row;
+ }
     .penHolder {
       width: 50%;
       height: auto;
@@ -152,6 +155,10 @@ body {
 
   }
   .fourthPage{
+    .row4{
+      display: flex;
+      flex-direction: row;
+    }
     .newDesign2 {
       font-size: 16px;
       letter-spacing: 3px;
@@ -189,18 +196,25 @@ body {
       padding-top: 50px;
     }
     & .new-design2 {
-
       padding-top: 90px;
-      padding-right: 150px;
-      padding-left: 150px;
+      padding-right: 60px;
+      padding-left: 60px;
       padding-bottom: 90px;
       z-index: 10;
       background-color: white;
       height: 100%;
       @media (min-width: 600px) {
         margin: 0 40% 0 0;
+
+
       }
     }
+
+  }
+
+  .fifthPage{
+    background: url("../img/back5.png") no-repeat fixed center;
+    background-size: cover;
   }
 }
 
