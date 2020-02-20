@@ -2,33 +2,208 @@ $color-main: white;
 $color-secondary: gray;
 
 body {
-  .firstPage{
+  .firstPage {
 
     background: url("../img/landingpage.png") no-repeat fixed center;
-    width: 100vw;
-    height: 100vh;
-
-    padding: 200px 30px 50px 80px;
-    font-family: 'Exo', sans-serif;
-    font-size: 40px;
+    background-size: cover;
     text-align: center;
-    .btn{
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-family: 'Exo', sans-serif;
+      font-size: 60px;
+
+      letter-spacing: 2px;
+      line-height: 75px;
+      color: #282828;
+
+      font-weight: 200;
+    }
+    .play_icon {
+      margin: 2em 0 1em 0;
+      padding: 0;
+    }
+    .btn {
       height: 50px;
-      width: 150px;
+      width: 190px;
       background-color: #ff6d6d;
       color: white;
     }
+    .text2 {
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 75px;
+      color: #282828;
+      font-family: "Exo", sans-serif;
+      font-weight: 400;
+      text-align: center;
+    }
   }
- // background-color: $color-main;
- // margin: 0;
+  .secondPage {
+
+    position: relative;
+    background-color: #ececec;
+    & .triangle {
+      position: absolute;
+      //top: 0;
+      bottom: 0;
+      //left: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 50vh 50vh;
+      border-color: transparent transparent #fb8686 transparent;
+    }
+    &
+    .newDesign {
+      font-size: 16px;
+      letter-spacing: 3px;
+      line-height: 50px;
+      color: #ff6d6d;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .thereIs {
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 50px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .colorText {
+      color: #ff6d6d;
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 50px;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .grayPara1 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+      padding-top: 50px;
+    }
+    .grayPara2 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+      padding-top: 40px;
+    }
+    & .new-design {
+      padding-top: 90px;
+      padding-right: 150px;
+      padding-left: 150px;
+      padding-bottom: 90px;
+      z-index: 10;
+      background-color: white;
+      height: 100%;
+      @media (min-width: 600px) {
+        margin: 0 40% 0 0;
+      }
+    }
+  }
+  .thirdPage {
+    background: url("../img/grayBackground.png") no-repeat fixed center;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .penHolder {
+      width: 50%;
+      height: auto;
+    }
+    .newFeatures {
+      font-size: 16px;
+      letter-spacing: 3px;
+      line-height: 50px;
+      color: #ff6d6d;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+
+    .someAwesome {
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 50px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+
+  }
+  .fourthPage{
+    .newDesign2 {
+      font-size: 16px;
+      letter-spacing: 3px;
+      line-height: 50px;
+      color: #ff6d6d;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .responsive{
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 50px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .colorText2 {
+      color: #ff6d6d;
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 50px;
+      font-family: "Exo";
+      font-weight: 500;
+    }
+    &
+    .grayPara3 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #282828;
+      font-family: "Exo";
+      font-weight: 500;
+      padding-top: 50px;
+    }
+    & .new-design2 {
+
+      padding-top: 90px;
+      padding-right: 150px;
+      padding-left: 150px;
+      padding-bottom: 90px;
+      z-index: 10;
+      background-color: white;
+      height: 100%;
+      @media (min-width: 600px) {
+        margin: 0 40% 0 0;
+      }
+    }
+  }
 }
 
 
-
-//img{
-//  background-size: cover;
-//  width: 100%;
-//  max-height: 100%;
-//}
 
 
