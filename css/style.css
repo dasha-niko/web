@@ -8,12 +8,18 @@ body .firstPage {
   justify-content: center;
   align-items: center; }
   body .firstPage .title {
-    font-family: 'Exo', sans-serif;
+    font-family: "Exo", sans-serif;
+    font-weight: 200;
     font-size: 60px;
     letter-spacing: 2px;
     line-height: 75px;
-    color: #282828;
-    font-weight: 200; }
+    color: #282828; }
+    @media (max-width: 576px) {
+      body .firstPage .title {
+        font-size: 35px;
+        line-height: 45px;
+        padding-right: 15px;
+        padding-left: 15px; } }
   body .firstPage .play_icon {
     margin: 2em 0 1em 0;
     padding: 0; }
@@ -43,33 +49,36 @@ body .secondPage {
     border-style: solid;
     border-width: 0 0 50vh 50vh;
     border-color: transparent transparent #fb8686 transparent; }
+    @media (max-width: 768px) {
+      body .secondPage .triangle {
+        display: none; } }
   body .secondPage .newDesign {
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 50px;
     color: #ff6d6d;
-    font-family: "Exo";
+    font-family: "Exo", sans-serif;
     font-weight: 500; }
   body .secondPage .thereIs {
     font-size: 40px;
     letter-spacing: 2px;
     line-height: 50px;
     color: #282828;
-    font-family: "Exo";
+    font-family: "Exo", sans-serif;
     font-weight: 500; }
   body .secondPage .colorText {
     color: #ff6d6d;
     font-size: 40px;
     letter-spacing: 2px;
     line-height: 50px;
-    font-family: "Exo";
+    font-family: "Exo", sans-serif;
     font-weight: 500; }
   body .secondPage .grayPara1 {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 26px;
     color: #282828;
-    font-family: "Exo";
+    font-family: "Exo", sans-serif;
     font-weight: 500;
     padding-top: 50px; }
   body .secondPage .grayPara2 {
@@ -77,61 +86,108 @@ body .secondPage {
     letter-spacing: 1px;
     line-height: 26px;
     color: #282828;
-    font-family: "Exo";
+    font-family: "Exo", sans-serif;
     font-weight: 500;
     padding-top: 40px; }
   body .secondPage .new-design {
-    padding-top: 90px;
-    padding-right: 150px;
-    padding-left: 150px;
-    padding-bottom: 90px;
+    padding: 90px 150px;
     z-index: 10;
     background-color: white;
     height: 100%; }
     @media (min-width: 600px) {
       body .secondPage .new-design {
         margin: 0 40% 0 0; } }
+    @media (max-width: 768px) {
+      body .secondPage .new-design {
+        margin: 0;
+        padding-right: 60px;
+        padding-left: 60px; } }
 
 body .thirdPage {
   background: url("../img/grayBackground.png") no-repeat fixed center;
   background-size: cover;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center; }
+  text-align: center; }
   body .thirdPage .firstRow {
     display: flex;
-    flex-direction: row; }
-  body .thirdPage .penHolder {
-    width: 50%;
-    height: auto; }
-  body .thirdPage .newFeatures {
-    font-size: 16px;
-    letter-spacing: 3px;
-    line-height: 50px;
-    color: #ff6d6d;
-    font-family: "Exo";
-    font-weight: 500; }
-  body .thirdPage .someAwesome {
-    font-size: 40px;
-    letter-spacing: 2px;
-    line-height: 50px;
-    color: #282828;
-    font-family: "Exo";
-    font-weight: 500; }
+    flex-direction: row;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      body .thirdPage .firstRow .thirdPage__title-img1 img {
+        max-width: 150px; } }
+    @media (max-width: 576px) {
+      body .thirdPage .firstRow .thirdPage__title-img1 {
+        display: none; } }
+    body .thirdPage .firstRow .thirdPage__title {
+      padding-top: 130px; }
+      @media (max-width: 576px) {
+        body .thirdPage .firstRow .thirdPage__title {
+          margin: 0 auto;
+          padding-right: 15px;
+          padding-left: 15px; } }
+      body .thirdPage .firstRow .thirdPage__title .newFeatures {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 50px;
+        color: #ff6d6d;
+        font-family: "Exo", sans-serif;
+        font-weight: 500; }
+      body .thirdPage .firstRow .thirdPage__title .someAwesome {
+        font-size: 40px;
+        letter-spacing: 2px;
+        line-height: 50px;
+        color: #282828;
+        font-family: "Exo", sans-serif;
+        font-weight: 500; }
+        @media (max-width: 768px) {
+          body .thirdPage .firstRow .thirdPage__title .someAwesome {
+            font-size: 30px; } }
+    @media (max-width: 768px) {
+      body .thirdPage .firstRow .thirdPage__title-img2 img {
+        max-width: 150px; } }
+    @media (max-width: 576px) {
+      body .thirdPage .firstRow .thirdPage__title-img2 {
+        display: none; } }
+  body .thirdPage .secondRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 80px; }
+    @media (max-width: 576px) {
+      body .thirdPage .secondRow {
+        flex-direction: column; } }
+    body .thirdPage .secondRow .feature {
+      flex-basis: 30%; }
+      body .thirdPage .secondRow .feature .feature__title {
+        padding-top: 20px;
+        font-family: "Exo", sans-serif;
+        font-weight: 500; }
+      body .thirdPage .secondRow .feature .feature__text {
+        padding-top: 10px; }
+      @media (max-width: 768px) {
+        body .thirdPage .secondRow .feature {
+          width: 60%;
+          align-self: center;
+          padding-top: 20px; } }
 
 body .fourthPage .row4 {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 1000px) {
+    body .fourthPage .row4 {
+      flex-direction: column-reverse; } }
+  body .fourthPage .row4 .img5 {
+    padding-top: 100px; }
+    @media (max-width: 768px) {
+      body .fourthPage .row4 .img5 img {
+        width: 70%;
+        margin: 0 auto; } }
 
 body .fourthPage .newDesign2 {
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 50px;
   color: #ff6d6d;
-  font-family: "Exo";
+  font-family: "Exo", sans-serif;
   font-weight: 500; }
 
 body .fourthPage .responsive {
@@ -139,15 +195,18 @@ body .fourthPage .responsive {
   letter-spacing: 2px;
   line-height: 50px;
   color: #282828;
-  font-family: "Exo";
+  font-family: "Exo", sans-serif;
   font-weight: 500; }
+  @media (max-width: 576px) {
+    body .fourthPage .responsive {
+      font-size: 30px; } }
 
 body .fourthPage .colorText2 {
   color: #ff6d6d;
   font-size: 40px;
   letter-spacing: 2px;
   line-height: 50px;
-  font-family: "Exo";
+  font-family: "Exo", sans-serif;
   font-weight: 500; }
 
 body .fourthPage .grayPara3 {
@@ -155,7 +214,7 @@ body .fourthPage .grayPara3 {
   letter-spacing: 1px;
   line-height: 26px;
   color: #282828;
-  font-family: "Exo";
+  font-family: "Exo", sans-serif;
   font-weight: 500;
   padding-top: 50px; }
 
@@ -169,8 +228,90 @@ body .fourthPage .new-design2 {
   height: 100%; }
   @media (min-width: 600px) {
     body .fourthPage .new-design2 {
-      margin: 0 40% 0 0; } }
+      margin: 0 10% 0 0; } }
+  @media (max-width: 1000px) {
+    body .fourthPage .new-design2 {
+      margin: 0;
+      padding-bottom: 30px; } }
+  @media (max-width: 576px) {
+    body .fourthPage .new-design2 {
+      padding-left: 30px; } }
 
 body .fifthPage {
-  background: url("../img/back5.png") no-repeat fixed center;
-  background-size: cover; }
+  background: url("../img/back5.jpg") no-repeat fixed center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 80px; }
+  @media (max-width: 576px) {
+    body .fifthPage {
+      flex-direction: column; } }
+  body .fifthPage .RowOnFifth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 80px; }
+    @media (max-width: 576px) {
+      body .fifthPage .RowOnFifth {
+        flex-direction: column; } }
+    body .fifthPage .RowOnFifth .clients {
+      flex-basis: 30%; }
+      body .fifthPage .RowOnFifth .clients .clients_title {
+        padding-top: 20px;
+        text-align: center;
+        font-family: "Exo", sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        color: white; }
+      body .fifthPage .RowOnFifth .clients .clients_red {
+        text-align: center;
+        font-family: "Exo", sans-serif;
+        font-weight: 500;
+        color: #ff6d6d; }
+      body .fifthPage .RowOnFifth .clients .clients_text {
+        opacity: 0.66;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: white;
+        font-style: italic;
+        font-family: "Exo", sans-serif;
+        font-weight: 300; }
+      @media (max-width: 768px) {
+        body .fifthPage .RowOnFifth .clients {
+          width: 60%;
+          align-self: center;
+          padding-top: 20px; } }
+  body .fifthPage .secondRowOnFifth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+body .browser {
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  background-color: #f6f5f3; }
+
+body .browser span6 {
+  line-height: 50px;
+  color: #ff6d6d;
+  letter-spacing: 2px;
+  padding-top: 110px;
+  display: block; }
+
+body .browser h6 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  margin-bottom: 30px; }
+
+body .browser p6 {
+  letter-spacing: 1px;
+  opacity: 0.66;
+  padding: 0 200px 80px; }
+
+body .browser img {
+  margin: 0 auto; }

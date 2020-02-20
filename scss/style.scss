@@ -1,5 +1,25 @@
+
 $color-main: white;
 $color-secondary: gray;
+@mixin exo{
+  font-family: "Exo", sans-serif;
+}
+@mixin exo-200{
+  font-family: "Exo", sans-serif;
+  font-weight: 200;
+}
+@mixin exo-300{
+  font-family: "Exo", sans-serif;
+  font-weight: 300;
+}
+@mixin exo-400{
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+}
+@mixin exo-500{
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+}
 
 body {
   .firstPage {
@@ -14,14 +34,19 @@ body {
     align-items: center;
 
     .title {
-      font-family: 'Exo', sans-serif;
+      @include exo-200;
       font-size: 60px;
 
       letter-spacing: 2px;
       line-height: 75px;
       color: #282828;
 
-      font-weight: 200;
+      @media (max-width: 576px){
+        font-size: 35px;
+        line-height: 45px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
     }
     .play_icon {
       margin: 2em 0 1em 0;
@@ -38,8 +63,7 @@ body {
       letter-spacing: 1px;
       line-height: 75px;
       color: #282828;
-      font-family: "Exo", sans-serif;
-      font-weight: 400;
+      @include exo-400;
       text-align: center;
     }
   }
@@ -58,6 +82,9 @@ body {
       border-style: solid;
       border-width: 0 0 50vh 50vh;
       border-color: transparent transparent #fb8686 transparent;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     &
     .newDesign {
@@ -65,8 +92,7 @@ body {
       letter-spacing: 3px;
       line-height: 50px;
       color: #ff6d6d;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
     }
     &
     .thereIs {
@@ -74,8 +100,7 @@ body {
       letter-spacing: 2px;
       line-height: 50px;
       color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
     }
     &
     .colorText {
@@ -83,8 +108,7 @@ body {
       font-size: 40px;
       letter-spacing: 2px;
       line-height: 50px;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
     }
     &
     .grayPara1 {
@@ -92,8 +116,7 @@ body {
       letter-spacing: 1px;
       line-height: 26px;
       color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
       padding-top: 50px;
     }
     .grayPara2 {
@@ -101,20 +124,21 @@ body {
       letter-spacing: 1px;
       line-height: 26px;
       color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
       padding-top: 40px;
     }
     & .new-design {
-      padding-top: 90px;
-      padding-right: 150px;
-      padding-left: 150px;
-      padding-bottom: 90px;
+      padding: 90px 150px;
       z-index: 10;
       background-color: white;
       height: 100%;
       @media (min-width: 600px) {
         margin: 0 40% 0 0;
+      }
+      @media (max-width: 768px) {
+        margin: 0;
+        padding-right: 60px;
+        padding-left: 60px;
       }
     }
   }
@@ -122,35 +146,79 @@ body {
     background: url("../img/grayBackground.png") no-repeat fixed center;
     background-size: cover;
     text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
- .firstRow{
-   display: flex;
-   flex-direction: row;
- }
-    .penHolder {
-      width: 50%;
-      height: auto;
+    .firstRow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .thirdPage__title-img1{
+        @media (max-width: 768px){
+          img{
+            max-width: 150px;
+          }
+        }
+        @media (max-width: 576px){
+          display: none;
+        }
+      }
+      .thirdPage__title{
+        padding-top: 130px;
+        @media (max-width: 576px){
+          margin: 0 auto;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .newFeatures {
+          font-size: 16px;
+          letter-spacing: 3px;
+          line-height: 50px;
+          color: #ff6d6d;
+          @include exo-500;
+        }
+        .someAwesome {
+          font-size: 40px;
+          letter-spacing: 2px;
+          line-height: 50px;
+          color: #282828;
+          @include exo-500;
+          @media (max-width: 768px){
+            font-size: 30px;
+          }
+        }
+      }
+      .thirdPage__title-img2{
+        @media (max-width: 768px){
+          img{
+            max-width: 150px;
+          }
+        }
+        @media (max-width: 576px){
+          display: none;
+        }
+      }
     }
-    .newFeatures {
-      font-size: 16px;
-      letter-spacing: 3px;
-      line-height: 50px;
-      color: #ff6d6d;
-      font-family: "Exo";
-      font-weight: 500;
-    }
-
-    .someAwesome {
-      font-size: 40px;
-      letter-spacing: 2px;
-      line-height: 50px;
-      color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+    .secondRow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 80px;
+      @media (max-width: 576px){
+        flex-direction: column;
+      }
+      .feature{
+        flex-basis: 30%;
+        .feature__title{
+          padding-top: 20px;
+          @include exo-500;
+        }
+        .feature__text{
+          padding-top: 10px;
+        }
+        @media (max-width: 768px){
+          width: 60%;
+          align-self: center;
+          padding-top: 20px;
+        }
+      }
     }
 
   }
@@ -158,14 +226,25 @@ body {
     .row4{
       display: flex;
       flex-direction: row;
+      @media (max-width: 1000px){
+        flex-direction: column-reverse;
+      }
+      .img5{
+        padding-top: 100px;
+        img{
+          @media (max-width: 768px){
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
     }
     .newDesign2 {
       font-size: 16px;
       letter-spacing: 3px;
       line-height: 50px;
       color: #ff6d6d;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
     }
     &
     .responsive{
@@ -173,8 +252,10 @@ body {
       letter-spacing: 2px;
       line-height: 50px;
       color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
+      @media(max-width: 576px){
+        font-size: 30px;
+      }
     }
     &
     .colorText2 {
@@ -182,8 +263,7 @@ body {
       font-size: 40px;
       letter-spacing: 2px;
       line-height: 50px;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
     }
     &
     .grayPara3 {
@@ -191,8 +271,7 @@ body {
       letter-spacing: 1px;
       line-height: 26px;
       color: #282828;
-      font-family: "Exo";
-      font-weight: 500;
+      @include exo-500;
       padding-top: 50px;
     }
     & .new-design2 {
@@ -204,20 +283,105 @@ body {
       background-color: white;
       height: 100%;
       @media (min-width: 600px) {
-        margin: 0 40% 0 0;
-
-
+        margin: 0 10% 0 0;
+      }
+      @media (max-width: 1000px){
+        margin: 0;
+        padding-bottom: 30px;
+      }
+      @media (max-width: 576px){
+        padding-left: 30px;
       }
     }
 
   }
 
   .fifthPage{
-    background: url("../img/back5.png") no-repeat fixed center;
+    background: url("../img/back5.jpg") no-repeat fixed center;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    @media (max-width: 576px){
+      flex-direction: column;
+    }
+    .RowOnFifth{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 80px;
+      @media (max-width: 576px){
+        flex-direction: column;
+      }
+      .clients{
+        flex-basis: 30%;
+        .clients_title{
+          padding-top: 20px;
+          text-align: center;
+          @include exo-500;
+          font-size: 22px;
+          color: white;
+        }
+        .clients_red{
+          text-align: center;
+          @include exo-500;
+          color: #ff6d6d;
+        }
+        .clients_text{
+          opacity: 0.66;
+          text-align: center;
+          padding-top: 10px;
+          font-size: 16px;
+          letter-spacing: 1px;
+          color:  white;
+          font-style: italic;
+          @include exo-300;
+        }
+        @media (max-width: 768px){
+          width: 60%;
+          align-self: center;
+          padding-top: 20px;
+        }
+      }
+    }
+    .secondRowOnFifth{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
   }
+
+  .browser {
+    @include exo-500;
+    text-align: center;
+    background-color: #f6f5f3;
+  }
+
+  .browser span6 {
+    line-height: 50px;
+    color: #ff6d6d;
+    letter-spacing: 2px;
+    padding-top: 110px;
+    display: block;
+  }
+
+  .browser h6 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .browser p6 {
+    letter-spacing: 1px;
+    opacity: 0.66;
+    padding: 0 200px 80px;
+  }
+
+  .browser img {
+    margin: 0 auto;
+  }
+
 }
-
-
-
-
