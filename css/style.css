@@ -23,11 +23,17 @@ body .firstPage {
   body .firstPage .play_icon {
     margin: 2em 0 1em 0;
     padding: 0; }
+  body .firstPage .play_icon:hover {
+    transform: scale(1.2); }
   body .firstPage .btn {
     height: 50px;
     width: 190px;
+    border-radius: 5px;
     background-color: #ff6d6d;
-    color: white; }
+    color: white;
+    border: none; }
+  body .firstPage .btn:hover {
+    background-color: red; }
   body .firstPage .text2 {
     font-size: 14px;
     letter-spacing: 1px;
@@ -74,6 +80,7 @@ body .secondPage {
     font-family: "Exo", sans-serif;
     font-weight: 500; }
   body .secondPage .grayPara1 {
+    opacity: 0.66;
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 26px;
@@ -82,6 +89,7 @@ body .secondPage {
     font-weight: 500;
     padding-top: 50px; }
   body .secondPage .grayPara2 {
+    opacity: 0.66;
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 26px;
@@ -159,9 +167,11 @@ body .thirdPage {
       flex-basis: 30%; }
       body .thirdPage .secondRow .feature .feature__title {
         padding-top: 20px;
+        font-size: 22px;
         font-family: "Exo", sans-serif;
         font-weight: 500; }
       body .thirdPage .secondRow .feature .feature__text {
+        opacity: 0.66;
         padding-top: 10px; }
       @media (max-width: 768px) {
         body .thirdPage .secondRow .feature {
@@ -210,6 +220,7 @@ body .fourthPage .colorText2 {
   font-weight: 500; }
 
 body .fourthPage .grayPara3 {
+  opacity: 0.66;
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 26px;
@@ -240,8 +251,6 @@ body .fourthPage .new-design2 {
 body .fifthPage {
   background: url("../img/back5.jpg") no-repeat fixed center;
   background-size: cover;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding-bottom: 80px; }
   @media (max-width: 576px) {
@@ -251,29 +260,28 @@ body .fifthPage {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 80px; }
+    padding-bottom: 80px;
+    padding-top: 50px; }
     @media (max-width: 576px) {
       body .fifthPage .RowOnFifth {
         flex-direction: column; } }
     body .fifthPage .RowOnFifth .clients {
-      flex-basis: 30%; }
+      flex-basis: 30%;
+      text-align: center; }
       body .fifthPage .RowOnFifth .clients .clients_img {
-        padding-left: 165px; }
+        margin: 0 auto; }
       body .fifthPage .RowOnFifth .clients .clients_title {
         padding-top: 20px;
-        text-align: center;
         font-family: "Exo", sans-serif;
         font-weight: 500;
         font-size: 22px;
         color: white; }
       body .fifthPage .RowOnFifth .clients .clients_red {
-        text-align: center;
         font-family: "Exo", sans-serif;
         font-weight: 500;
         color: #ff6d6d; }
       body .fifthPage .RowOnFifth .clients .clients_text {
         opacity: 0.66;
-        text-align: center;
         padding-top: 10px;
         font-size: 16px;
         letter-spacing: 1px;
@@ -294,15 +302,18 @@ body .fifthPage {
 body .browser {
   text-align: center;
   background-color: #f6f5f3; }
-  body .browser.text6 {
+  body .browser .text6 {
+    opacity: 0.66;
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 26px;
     color: #282828;
     font-family: "Exo", sans-serif;
     font-weight: 500;
-    padding-top: 50px; }
+    margin: 20px auto 90px;
+    width: 55%; }
   body .browser .newFeatures2 {
+    padding-top: 70px;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 50px;
@@ -319,3 +330,66 @@ body .browser {
     @media (max-width: 768px) {
       body .browser .someAwesome2 {
         font-size: 30px; } }
+
+body .section-form {
+  background: #323969; }
+  body .section-form .section-inner {
+    display: flex;
+    flex-direction: column; }
+  body .section-form-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; }
+  body .section-form-wrapper {
+    margin: 0 auto; }
+    body .section-form-wrapper__title, body .section-form-wrapper__tip, body .section-form-wrapper__form, body .section-form-wrapper__subtitle {
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      font-family: "Exo", sans-serif;
+      font-weight: 400; }
+    body .section-form-wrapper .pretitle {
+      color: #fb8686;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 10px; }
+    body .section-form-wrapper__title {
+      font-family: "Exo", sans-serif;
+      font-weight: 500;
+      font-size: 40px; }
+    body .section-form-wrapper__tip {
+      padding-top: 42px;
+      padding-left: 57%; }
+      body .section-form-wrapper__tip div, body .section-form-wrapper__tip img {
+        display: inline; }
+      body .section-form-wrapper__tip div {
+        padding-bottom: 42px;
+        position: absolute; }
+      body .section-form-wrapper__tip img {
+        padding-bottom: 17px;
+        padding-right: 10px;
+        padding-top: 5px; }
+    body .section-form-wrapper__form {
+      display: flex; }
+      body .section-form-wrapper__form-input {
+        flex: 1;
+        padding-right: 30px; }
+        body .section-form-wrapper__form-input input {
+          width: 100%;
+          border: rgba(255, 255, 255, 0.5) 1px solid;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px 28px; }
+          body .section-form-wrapper__form-input input::placeholder {
+            color: #ffffff; }
+      body .section-form-wrapper__form-button button {
+        background: #fb8686;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        padding: 20px 90px;
+        color: white; }
+    body .section-form-wrapper__subtitle {
+      opacity: 0.6;
+      margin-top: 53px;
+      margin-bottom: 85px; }
